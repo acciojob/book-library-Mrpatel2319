@@ -1,38 +1,74 @@
+/* General Styles */
 body {
   background-color: #f8f8f8;
   width: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .header {
   text-align: center;
+  padding: 20px;
+  font-size: 2rem;
+  color: #333;
 }
 
 .book-library {
-  border-radius: 5px;
-  background-color: #ffffff;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap; /* Ensures books wrap on smaller screens */
+  gap: 20px;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .book {
-  margin: 20px;
+  flex: 0 1 300px; /* Ensures consistent book card sizes */
   background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-img {
-  margin: 10px 37%;
+.book img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
 }
 
-button {
-  background-color: #2ecc71;
-  border: none;
-  width: 100%;
-  padding: 20px;
+.book h2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
 }
 
 .author {
-  color: rgb(119, 119, 119); /* Changed text color to white */
+  color: rgb(255, 255, 255); /* Changed to white per test requirements */
   background-color: rgb(46, 204, 113);
-  border-radius: 5px; /* Added border-radius as part of test */
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+button {
+  background-color: rgb(46, 204, 113);
+  border: none;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(39, 174, 96);
 }
